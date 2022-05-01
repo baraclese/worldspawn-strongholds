@@ -10,14 +10,14 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public abstract class WorldspawnStrongholds extends StructureFeature
 {
     @ModifyVariable(method = "shouldStartAt", at = @At(value = "STORE", ordinal = 0), index = 10)
-    private int modifyChunkPosX(int pos)
+    private int modifyChunkPosX(int xpos)
     {
-        return pos + (this.world.getLevelProperties().getSpawnX() >> 4);
+        return xpos + (this.world.getLevelProperties().getSpawnX() >> 4);
     }
 
     @ModifyVariable(method = "shouldStartAt", at = @At(value = "STORE", ordinal = 0), index = 11)
-    private int modifyChunkPosZ(int pos)
+    private int modifyChunkPosZ(int zpos)
     {
-        return pos + (this.world.getLevelProperties().getSpawnZ() >> 4);
+        return zpos + (this.world.getLevelProperties().getSpawnZ() >> 4);
     }
 }
