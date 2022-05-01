@@ -11,7 +11,7 @@
     "homepage": "https://github.com/baraclese/worldspawn-strongholds",
     "sources": "https://github.com/baraclese/worldspawn-strongholds"
   },
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "environment": "*",
   "entrypoints": {
     "main": [
